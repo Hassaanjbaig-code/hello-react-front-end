@@ -1,11 +1,20 @@
-import './App.css';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchgreeting } from "./store/greeting/greeting"
 
-function App() {
-  return (
-    <div className="App">
-      <h1>React App</h1>
-    </div>
-  );
+const App = () => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchgreeting());
+    }, []);
+    
+    const greetingData = useSelector((state) => state.greeting.data);
+    
+    return (
+        <div>
+            <h1>{greetingData.greeting}</h1>
+        </div>
+    );
 }
 
 export default App;

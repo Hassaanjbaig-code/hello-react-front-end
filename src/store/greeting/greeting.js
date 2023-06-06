@@ -7,9 +7,10 @@ export const fetchgreeting = createAsyncThunk("greeting/fetchgreeting", async ()
         method: "GET",
         headers: {
             "Content-Type": "application/json"
-        }
+        },
     });
-    return await response.json();
+    const data = await response.json();
+    return data;
 });
 
 const greetingSlice = createSlice({
@@ -24,4 +25,4 @@ const greetingSlice = createSlice({
     }
 })
 
-export default greetingSlice.reducer;
+export default greetingSlice;
