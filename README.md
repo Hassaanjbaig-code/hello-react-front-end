@@ -26,7 +26,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Greeting Backend] <a name="about-project"></a>
+# 📖 [Greeting front end] <a name="about-project"></a>
 
 **[Greeting front end]** is a project that allows users to [greet] their friends in a different way.
 
